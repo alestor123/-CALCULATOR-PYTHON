@@ -1,4 +1,4 @@
-**PYthon Calculator**
+**Python Calculator**
 This is a simple calculator made using tkinter.Actually tkinter cant be used for large projects.
 
 
@@ -28,4 +28,4 @@ run this command - `pyinstaller yourprogram.py`
 
 
 **For tkinter basic tutorial**
-- Cross Roads[click here](https://www.youtube.com/watch?v=NMSRifzm7AQ)
+- Cross Roads(youtube channel)  [click here](https://www.youtube.com/watch?v=NMSRifzm7AQ)

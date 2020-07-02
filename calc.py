@@ -41,7 +41,7 @@ class calc:
         else: 
             self.e.delete(0,END) 
             self.e.insert(0,self.value) 
-     def clearall(self): 
+    def clearall(self): 
             self.e.delete(0,END) 
   
     def clear1(self): 

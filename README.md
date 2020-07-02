@@ -3,6 +3,7 @@ This is a simple calculator made using tkinter.Actually tkinter cant be used for
 
 
 **For running code **
+
 run this command - `python calculator.py`
 
 **Modules Used For This Project**

@@ -83,4 +83,6 @@ class calc:
             Button(master,text=")",width=5,height=3, fg="blue",bg="orange", command=lambda:self.action(')')).grid(row=2, column=5) 
             Button(master,text="?",width=5,height=3, fg="red",bg="light green", command=lambda:self.squareroot()).grid(row=3, column=4) 
             Button(master,text="x²",width=5,height=3, fg="white",bg="blue", command=lambda:self.square()).grid(row=3, column=5) 
-  
+root = Tk() 
+obj=calc(root)   
+root.mainloop()

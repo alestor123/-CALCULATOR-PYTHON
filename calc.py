@@ -1,7 +1,9 @@
 from tkinter import *
 import math 
+# importing Tkinter and math 
+#adding a class called cal for basic functions such as square root , square, clearall,etc
 class calc: 
-  
+#  replacing  x with * and ÷ with / 
     def getandreplace(self): 
         self.expression = self.e.get() 
         self.newtext=self.expression.replace('/','/') 
@@ -22,6 +24,7 @@ class calc:
     def square(self): 
         self.getandreplace() 
         try: 
+             # evaluate the expression using the eval function 
             self.value= eval(self.newtext)  
         except SyntaxError or NameError: 
             self.e.delete(0,END) 
@@ -32,6 +35,7 @@ class calc:
             self.e.insert(0,self.sqval) 
 
     def equals(self): 
+#when the equal button is pressed if there is a yntax error it will insert invalid input
         self.getandreplace() 
         try: 
             self.value= eval(self.newtext)  
@@ -41,9 +45,10 @@ class calc:
         else: 
             self.e.delete(0,END) 
             self.e.insert(0,self.value) 
+  #for cleating all
     def clearall(self): 
             self.e.delete(0,END) 
-  
+  #for clearing 
     def clear1(self): 
             self.txt=self.e.get()[:-1] 
             self.e.delete(0,END) 
@@ -60,6 +65,7 @@ class calc:
             self.e = Entry(master) 
             self.e.grid(row=0,column=0,columnspan=6,pady=3) 
             self.e.focus_set() 
+  #adding buttons         text inside buttons          color                  cmd anonymous
             Button(master,text="=",width=11,height=3,fg="blue", bg="orange",command=lambda:self.equals()).grid( row=4, column=4,columnspan=2) 
             Button(master,text='AC',width=5,height=3, fg="red", bg="light green", command=lambda:self.clearall()).grid(row=1, column=4) 
             Button(master,text='C',width=5,height=3, fg="red",bg="light green", command=lambda:self.clear1()).grid(row=1, column=5) 
@@ -83,6 +89,7 @@ class calc:
             Button(master,text=")",width=5,height=3, fg="blue",bg="orange", command=lambda:self.action(')')).grid(row=2, column=5) 
             Button(master,text="?",width=5,height=3, fg="red",bg="light green", command=lambda:self.squareroot()).grid(row=3, column=4) 
             Button(master,text="x²",width=5,height=3, fg="white",bg="blue", command=lambda:self.square()).grid(row=3, column=5) 
+# this is a Driver Code 
 root = Tk() 
-obj=calc(root)   
+obj=calc(root)   #initing an object 
 root.mainloop()
